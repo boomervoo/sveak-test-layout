@@ -1,0 +1,11 @@
+.burger-menu
+    input#burger-toggle(type="checkbox")
+    label.burger-button(for="burger-toggle")
+        span.burger-line
+    .burger-nav
+        ul.burger-menu__list
+
+            each item, index in [...Array(25).keys()]
+                li(class=`menu__item${i === 0 ? 'menu__item--active' : ''}`)
+                    .menu__circle
+                    .menu__line(class=`menu__line--${item + 20}`)

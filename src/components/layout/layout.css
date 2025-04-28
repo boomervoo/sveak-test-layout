@@ -1,0 +1,9 @@
+.layout {
+  position: relative;
+  background-color: #d6bdff;
+  flex: 1 1 auto;
+  display: flex;
+  height: 60vh;
+}
+
+/*# sourceMappingURL=layout.css.map */

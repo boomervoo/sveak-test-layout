@@ -1,0 +1,61 @@
+* {
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  background-size: contain;
+}
+
+body {
+  margin: 0;
+  background-attachment: fixed;
+  scrollbar-width: none;
+}
+
+input {
+  background-color: transparent;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+.container {
+  position: relative;
+  min-height: 100vh;
+  width: 100vw;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.container::-webkit-scrollbar {
+  display: none;
+}
+
+.flex {
+  display: flex;
+}
+
+.skeleton {
+  background: linear-gradient(90deg, #3c3c3c 0%, #444 51.04%, #333 100%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  border-radius: 4px;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

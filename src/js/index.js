@@ -1,0 +1,55 @@
+import '../scss/style.scss';
+import '../scss/variables.scss';
+import '../components/menu/menu.scss';
+import '../components/layout/layout.scss';
+import '../components/content/content.scss';
+import '../components/footer/footer.scss';
+import '../components/card/card.scss';
+import '../components/burger/burger.scss';
+
+function hideIncompleteCardRows() {
+  const container = document.querySelector('.content'); // укажите ваш класс контейнера
+  const cards = container.querySelectorAll('.card');
+
+  if (cards.length === 0) return;
+
+  // 1. Сначала показываем все карточки
+  cards.forEach((card) => (card.style.display = ''));
+
+  // 2. Находим количество карточек в первом ряду
+
+  let cardsPerRow = 0;
+  const firstCardRect = cards[0].getBoundingClientRect();
+
+  for (let i = 1; i < cards.length; i++) {
+    const currentCardRect = cards[i].getBoundingClientRect();
+    if (currentCardRect.top > firstCardRect.top) {
+      cardsPerRow = i;
+      break;
+    }
+  }
+
+  // Если все карточки в одном ряду (не нашли переход на новую строку)
+  if (cardsPerRow === 0) cardsPerRow = cards.length;
+
+  // 3. Скрываем карточки в неполных рядах
+  const fullRows = Math.floor(cards.length / cardsPerRow);
+  const cardsInFullRows = fullRows * cardsPerRow;
+  const remainingCards = cards.length - cardsInFullRows;
+
+  if (remainingCards > 0) {
+    for (let i = cardsInFullRows; i < cards.length; i++) {
+      cards[i].style.display = 'none';
+    }
+  }
+}
+
+// Оптимизация для частых вызовов при ресайзе
+let resizeTimeout;
+function debouncedHide() {
+  clearTimeout(resizeTimeout);
+  resizeTimeout = setTimeout(hideIncompleteCardRows, 100);
+}
+
+window.addEventListener('load', hideIncompleteCardRows);
+window.addEventListener('resize', debouncedHide);

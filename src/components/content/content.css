@@ -1,0 +1,91 @@
+.content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 30px;
+  align-items: flex-end;
+  justify-content: center;
+  overflow: auto;
+}
+.content__block-top {
+  position: fixed;
+  top: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.content__left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  top: 10px;
+  right: 20px;
+  height: 60px;
+}
+.content__left__polygon {
+  fill: #766A6A;
+  width: 23px;
+  height: 28px;
+  transition: fill 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+.content__left__polygon:hover {
+  fill: red;
+  cursor: pointer;
+  transform: scale(1.3);
+}
+.content__left__polygon:active {
+  fill: red;
+  cursor: pointer;
+  transform: scale(0.8);
+}
+.content__left__elipse {
+  fill: #766A6A;
+  width: 23px;
+  height: 23px;
+  transition: fill 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+.content__left__elipse:hover {
+  fill: red;
+  cursor: pointer;
+  transform: scale(1.3);
+}
+.content__left__elipse:active {
+  fill: red;
+  cursor: pointer;
+  transform: scale(0.8);
+}
+.content__left__rectangle {
+  fill: #766A6A;
+  width: 23px;
+  height: 23px;
+  transition: fill 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+.content__left__rectangle:hover {
+  fill: red;
+  cursor: pointer;
+  transform: scale(1.3);
+}
+.content__left__rectangle:active {
+  fill: red;
+  cursor: pointer;
+  transform: scale(0.8);
+}
+
+@media (max-width: 1024px) {
+  .content {
+    padding: 20px;
+  }
+}
+@media (max-width: 960px) {
+  .content__block-top {
+    position: absolute;
+    padding: 0 20px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgb(149, 217, 255);
+  }
+}
+
+/*# sourceMappingURL=content.css.map */

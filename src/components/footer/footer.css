@@ -1,0 +1,23 @@
+.footer {
+  padding: 30px;
+  background-color: rgba(149, 217, 255, 0.6);
+  border-top: 2px solid rgba(0, 0, 0, 0.14);
+}
+.footer__content {
+  width: 100%;
+}
+.footer__title {
+  margin: 0;
+  font-weight: 700;
+}
+.footer__description {
+  font-size: 13px;
+}
+
+@media (max-width: 1024px) {
+  .footer {
+    padding: 20px;
+  }
+}
+
+/*# sourceMappingURL=footer.css.map */
