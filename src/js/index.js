@@ -13,10 +13,7 @@ function hideIncompleteCardRows() {
 
   if (cards.length === 0) return;
 
-
   cards.forEach((card) => (card.style.display = ''));
-
-
 
   let cardsPerRow = 0;
   const firstCardRect = cards[0].getBoundingClientRect();
@@ -29,9 +26,7 @@ function hideIncompleteCardRows() {
     }
   }
 
-
   if (cardsPerRow === 0) cardsPerRow = cards.length;
-
 
   const fullRows = Math.floor(cards.length / cardsPerRow);
   const cardsInFullRows = fullRows * cardsPerRow;
@@ -43,7 +38,6 @@ function hideIncompleteCardRows() {
     }
   }
 }
-
 
 let resizeTimeout;
 function debouncedHide() {
