@@ -13,10 +13,10 @@ function hideIncompleteCardRows() {
 
   if (cards.length === 0) return;
 
-  // 1. Сначала показываем все карточки
+
   cards.forEach((card) => (card.style.display = ''));
 
-  // 2. Находим количество карточек в первом ряду
+
 
   let cardsPerRow = 0;
   const firstCardRect = cards[0].getBoundingClientRect();
