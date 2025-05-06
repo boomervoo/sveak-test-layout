@@ -8,7 +8,7 @@ import '../components/card/card.scss';
 import '../components/burger/burger.scss';
 
 function hideIncompleteCardRows() {
-  const container = document.querySelector('.content'); // укажите ваш класс контейнера
+  const container = document.querySelector('.content'); 
   const cards = container.querySelectorAll('.card');
 
   if (cards.length === 0) return;
@@ -29,10 +29,10 @@ function hideIncompleteCardRows() {
     }
   }
 
-  // Если все карточки в одном ряду (не нашли переход на новую строку)
+
   if (cardsPerRow === 0) cardsPerRow = cards.length;
 
-  // 3. Скрываем карточки в неполных рядах
+
   const fullRows = Math.floor(cards.length / cardsPerRow);
   const cardsInFullRows = fullRows * cardsPerRow;
   const remainingCards = cards.length - cardsInFullRows;
@@ -44,7 +44,7 @@ function hideIncompleteCardRows() {
   }
 }
 
-// Оптимизация для частых вызовов при ресайзе
+
 let resizeTimeout;
 function debouncedHide() {
   clearTimeout(resizeTimeout);
