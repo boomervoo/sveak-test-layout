@@ -1,5 +1,6 @@
 .layout {
   position: relative;
+  max-width: 100%;
   background-color: #d6bdff;
   flex: 1 1 auto;
   display: flex;

@@ -4,7 +4,13 @@ html(lang="ru")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         title Sveak Test
         body
-            main
+            header.header
+                include components/header/header.pug
+            main.main
+                aside
+                    include components/menu/menu.pug
+
                 .container
                     include components/layout/layout.pug
+            footer.footer
                     include components/footer/footer.pug

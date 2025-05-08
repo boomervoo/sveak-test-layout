@@ -4,5 +4,5 @@
 
         each item, index in [...Array(25).keys()]
             li(class=`menu__item${i === 0 ? 'menu__item--active' : ''}`)
-                    .menu__circle
-                    .menu__line(class=`menu__line--${item  + 20}`)
+                    .menu__circle.skeleton
+                    .menu__line.skeleton(class=`menu__line--${item  + 20}`)

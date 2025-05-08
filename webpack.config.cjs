@@ -40,7 +40,6 @@ module.exports = {
         test: /\.(scss|css)$/,
         use: ['style-loader', 'css-loader', 'postcss-loader', 'sass-loader'],
       },
-
       {
         test: /\.(png|jpg|gif|svg)$/i,
         use: [
@@ -80,7 +79,6 @@ module.exports = {
         },
       },
 
-      // Обработка шрифтов
       {
         test: /\.(woff2?|eot|ttf|otf)$/i,
         type: 'asset/resource',

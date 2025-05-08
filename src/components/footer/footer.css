@@ -1,17 +1,16 @@
 .footer {
+  height: 100%;
   padding: 30px;
   background-color: rgba(149, 217, 255, 0.6);
   border-top: 2px solid rgba(0, 0, 0, 0.14);
 }
-.footer__content {
-  width: 100%;
-}
 .footer__title {
-  margin: 0;
-  font-weight: 700;
+  margin-bottom: 10px;
+  font-weight: 500;
 }
 .footer__description {
   font-size: 13px;
+  font-weight: 400;
 }
 
 @media (max-width: 1024px) {

@@ -1,14 +1,15 @@
+import 'reset-css';
 import '../scss/style.scss';
-import '../scss/variables.scss';
 import '../components/menu/menu.scss';
 import '../components/layout/layout.scss';
 import '../components/content/content.scss';
 import '../components/footer/footer.scss';
 import '../components/card/card.scss';
 import '../components/burger/burger.scss';
+import '../components/header/header.scss';
 
 function hideIncompleteCardRows() {
-  const container = document.querySelector('.content'); 
+  const container = document.querySelector('.content');
   const cards = container.querySelectorAll('.card');
 
   if (cards.length === 0) return;
